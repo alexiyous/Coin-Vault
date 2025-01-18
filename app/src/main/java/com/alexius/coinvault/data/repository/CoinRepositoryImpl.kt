@@ -19,7 +19,7 @@ class CoinRepositoryImpl @Inject constructor(
     override fun getCoins(): Flow<Resource<List<Coin>>> = flow {
         try {
             emit(Resource.Loading())
-            val coins = api.getCoins().coinDto.map { it.toCoin() }
+            val coins = api.getCoins().map { it.toCoin() }
             emit(Resource.Success(coins))
         } catch (e: HttpException){
             emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred"))

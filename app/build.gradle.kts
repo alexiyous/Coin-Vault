@@ -57,6 +57,12 @@ dependencies {
     //OkHttp Logging Interceptor
     implementation(libs.logging.interceptor)
 
+    //AsStateWithLifecycle
+    implementation (libs.androidx.foundation)
+
+    //FlowRow
+    implementation(libs.accompanist.flowlayout)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
